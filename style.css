@@ -1,0 +1,173 @@
+@charset "utf-8";
+body {
+    color: #ffffff;
+  background-image: url("images/woodgrain-615732_1280.jpg"); /* 画像のパスを指定 */
+  background-size: cover;                         /* 画面いっぱいに表示 */
+  background-position: center;                    /* 中央に配置 */
+  background-repeat: no-repeat;                   /* 繰り返しなし */
+  background-attachment: fixed;                   /* スクロールしても固定 */
+  font-family: 'Zen Maru Gothic', sans-serif;
+}
+footer {
+    background-color: rgba(0, 0, 0, 0.6); /* 半透明の背景で読みやすく */
+    text-align: center;
+    padding: 1em 2em;
+}
+
+/* ヘッダー全体を相対位置に */
+.main {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+/* 背景画像を横幅いっぱいに */
+.main img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* テキストを画像の上に重ねる */
+.main-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.4); /* 半透明の背景で読みやすく */
+  padding: 1em 2em;
+  border-radius: 8px;
+}
+
+
+/* 見出しと段落のスタイル調整 */
+.main-text h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+  font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+.main-text p {
+  font-size: 1em;
+  line-height: 1.6;
+  font-family: 'Noto Serif JP', serif;
+}
+
+figure {
+  display: flex;
+  align-items: center;         /* 垂直方向の中央揃え */
+  gap: 2em;                    /* 画像と説明文の間隔 */
+  max-width: 960px;
+  margin: 2em auto;
+  padding: 1em;
+  background-color: rgba(0, 0, 0, 0.4); /* 半透明の背景で読みやすく */
+  border-radius: 8px;
+}
+/* 左寄せ：画像→説明文 */
+.cake {
+  flex-direction: row;
+}
+
+/* 右寄せ：説明文→画像 */
+.coffee {
+  flex-direction: row-reverse;
+}
+
+/* 画像サイズを調整 */
+figure img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+/* 説明文のスタイル */
+figcaption {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1rem;
+  color: #f5f5f5;
+  line-height: 1.8;
+  max-width: 50vw;
+}
+figcaption h1 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  font-family: 'Zen Maru Gothic', sans-serif;
+}
+.access {
+  font-size: 1em;
+  line-height: 1.6;
+  font-family: 'Noto Serif JP', serif;
+  color: #f5f5f5;
+  background-color: rgba(0, 0, 0, 0.4); /* 半透明の背景で読みやすく */
+  padding: 2em;
+  text-align: center;
+}
+.access h2 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  font-family: 'Zen Maru Gothic', sans-serif;
+}
+.map-container {
+  display: flex;
+  align-items: center;         /* 垂直方向の中央揃え */
+  gap: 2em;                    /* 画像と説明文の間隔 */
+  max-width: 960px;
+  margin: 2em auto;
+  padding: 1em;
+  background-color: rgba(0, 0, 0, 0.4); /* 半透明の背景で読みやすく */
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 0.95em;
+  }
+
+  .main-text {
+    width: 90%;
+    padding: 1em;
+  }
+
+  .main-text h1 {
+    font-size: 2em;
+  }
+
+  figure {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  figure img {
+    max-width: 45%;
+    margin: 0 auto;
+  }
+
+  figcaption {
+    max-width: 70%;
+    font-size: 0.95rem;
+  }
+
+  .access {
+    padding: 1em;
+  }
+
+  .map-container {
+    flex-direction: column;
+    width: 90%;
+    padding: 1em;
+  }
+
+  .map-container iframe {
+    width: 100%;
+    height: auto;
+  }
+
+  footer {
+    padding: 1em;
+    font-size: 0.9em;
+  }
+}
